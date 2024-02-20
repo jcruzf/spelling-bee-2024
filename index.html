@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spelling Bee Certificate</title>
+  </head>
+  
+  <body>
+    <div id="app"></div>
+
+    <div id="congratulations" >
+      <button id="confeti" class="button" onclick="removeButton(event)" style="opacity: 1;">Touch Here</button>
+      <script src="/confetti.min.js"></script>
+      <script> let confetti = new Confetti("confeti");</script>
+      <canvas width="1082" height="1230" style="position: fixed; top: 0px; left: 0px; width: calc(100%); height: calc(100%); margin: 0px; padding: 0px; z-index: 999999999; pointer-events: none;"></canvas>
+      <script>
+        function removeButton(t) {
+          (t.target.style.opacity = 0),
+            setTimeout(() => {
+              (t.target.style.visibility = ""), (t.target.style.opacity = 1);
+            }, 5e3);
+        }
+      </script>
+    </div>
+  
+    <script type="module" src="/main.js"></script>
+    
+    
+  </body>
+
+  
+</html>

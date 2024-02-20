@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;600;700;800&family=Kalam:wght@300;400;700&family=Luckiest+Guy&display=swap');
+:root {
+  font-family: "Barlow", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 700;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 1);
+  background-image: radial-gradient(circle, #FFFF25 10%, #F71818 90%);
+
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  align-self: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.5em;
+  line-height: 1;
+  text-shadow: 2px 2px 6px rgba(211, 92, 23, 1),
+              -2px -2px 6px rgba(211, 92, 23, 1),
+              2px -2px 6px rgba(211, 92, 23, 1),
+              -3px 3px 6px rgba(211, 92, 23, 1);
+}
+
+#app {
+  max-width: 440px;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+#congratulations {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+.logo {
+  height: 9em;
+  margin: 0 auto;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.button {
+ color: #ecf0f1;
+ font-size: 17px;
+ background-color: #e67e22;
+ border: 1px solid #f39c12;
+ border-radius: 5px;
+ padding: 10px;
+ box-shadow: 0px 6px 0px #d35400;
+ transition: all .1s;
+}
+
+.button:active {
+ box-shadow: 0px 2px 0px #d35400;
+ position: relative;
+ top: 2px;
+}
+
+
+
