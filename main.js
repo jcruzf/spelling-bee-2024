@@ -8,6 +8,7 @@ import thirdGrade from './3-grade.png'
 import fourthGrade from './4-grade.png'
 import congratulations from './congratulations.png'
 import missClaudia from './miss-claudia.png'
+import confetti from 'canvas-confetti'
 
 window.onload = function() {
       try {
@@ -51,6 +52,8 @@ window.onload = function() {
       }
 }
 
+
+
 document.querySelector('#app').innerHTML = `
   <div>
     <img src="${logoCGV}" alt="Spelling Bee" />
@@ -78,3 +81,36 @@ document.querySelector('#app').innerHTML = `
 
   </div>
 `
+
+var defaults = {
+      spread: 360,
+      ticks: 50,
+      gravity: 0,
+      decay: 0.94,
+      startVelocity: 30,
+      colors: ['FFE400', 'FFBD00', 'E89400', 'FFCA6C', 'FDFFB8']
+    };
+
+    function shoot() {
+      confetti({
+        ...defaults,
+        particleCount: 40,
+        scalar: 1.2,
+        shapes: ['star']
+      });
+
+      confetti({
+        ...defaults,
+        particleCount: 10,
+        scalar: 0.75,
+        shapes: ['circle']
+      });
+    }
+
+    setTimeout(shoot, 0);
+    setTimeout(shoot, 100);
+    setTimeout(shoot, 200);
+
+    document.querySelector('.bee-body').addEventListener('click', () => {
+	    shoot()
+    })
