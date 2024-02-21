@@ -53,7 +53,7 @@ window.onload = function() {
 
 document.querySelector('#app').innerHTML = `
   <div>
-    <img src="${logoCGV}" class="logo" alt="Spelling Bee" />
+    <img src="${logoCGV}" alt="Spelling Bee" />
     <img src="${spellingBeeTitle}" alt="Spelling Bee" />
       
       <div class="bee">
